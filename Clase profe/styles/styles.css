@@ -22,7 +22,7 @@ ul{
 
 .button:hover{
     cursor: pointer;
-    transform: scale(1.1);
+    
 }
 
 .mainbutton{
@@ -35,6 +35,7 @@ ul{
 .mainbutton:hover{
     
   box-shadow: 1px 1px blueviolet;
+  transform: scale(1.3);
     
 }
 .logo {
