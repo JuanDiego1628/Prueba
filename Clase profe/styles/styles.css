@@ -11,12 +11,26 @@ ul{
     justify-content: space-between;
     padding:10px;
 }
+
+.button{
+    background-color: rgb(7, 87, 40);
+    color: white;
+    cursor: pointer;
+    border: 0px;
+    padding: 5px 10px;
+    border-radius: 10px 0px 10px 0px;
+    box-shadow: 2px 2px blue;
+       
+}
+.button:hover{
+    cursor: pointer;
+    color: yellow;
+    background-color: thistle;
+}
 .logo {
-<<<<<<< HEAD
+
     height: 70px;
 }
-=======
-    height: 90px;
-    
-}
->>>>>>> 3-estructura
+
+ 
+
