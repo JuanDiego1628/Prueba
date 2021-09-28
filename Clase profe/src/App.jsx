@@ -6,7 +6,7 @@ import log1 from './media/logo.png';
 
 function App() {
   return (
-    <div className="App">
+      <div className="App">
        <header>
         <ul className="navbar">
 
@@ -35,27 +35,28 @@ function App() {
         <section>
             <h1>Raza de Perros</h1>
             <ul className="alineacion">
-                <li className="breedcard">
-                    <div className="contenedorImagenes">
-                        <img  src={img1} alt="Bordercollie"/>
-                    </div>
-                    Bordercolllie
-                </li>
-                <li className="breedcard">
-                    <div className="contenedorImagenes">
-                        <img src={img2} alt="Rodeshian"/>
-                    </div>
-                    Rodeshian
-                </li>
+                <CardRazaperros razaname="BorderCollie" imagen={img1}/>
+                <CardRazaperros razaname="Rhodesian" imagen={img2}/>                
+                
             </ul>
         </section>
         <section></section>
     </main>
     
-
-    
-    </div>
+   </div>
   );
 }
+function CardRazaperros({razaname,imagen}){
+    return (
+        <li className="breedcard">
+            <div className="contenedorImagenes">
+                <img  src={imagen} alt={razaname}/>
+            </div>
+            <span className="title">{razaname}</span>
+            
+        </li>
+    );
+}
+
 
 export default App;
