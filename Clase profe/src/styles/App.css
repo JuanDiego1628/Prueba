@@ -1,6 +1,19 @@
 body{
   margin: 0px;
 }
+.mainconteiner{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.mainconteiner > main{
+  height: 100vh;
+  color: aqua;
+}
+.mainconteiner > footer{
+  background-color: red;
+  padding: 10px;
+}
 ul{
   list-style: none;
   padding: 0px;
