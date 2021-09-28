@@ -1,13 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import img1 from './media/Bordercolllie.jpg';
-import img2 from './media/rodeshian.jpg';
-import log1 from './media/logo.png';
-
-function App() {
-  return (
-    <div className="App">
-       <header>
+import CardRazaperros from 'components/CardRazaPerros';
+import img1 from 'media/Bordercolllie.jpg';
+import img2 from 'media/rodeshian.jpg';
+import log1 from 'media/logo.png';
+function Index(){
+    return (
+        <div>
+        <header>
         <ul className="navbar">
 
             <li>
@@ -35,27 +33,15 @@ function App() {
         <section>
             <h1>Raza de Perros</h1>
             <ul className="alineacion">
-                <li className="breedcard">
-                    <div className="contenedorImagenes">
-                        <img  src={img1} alt="Bordercollie"/>
-                    </div>
-                    Bordercolllie
-                </li>
-                <li className="breedcard">
-                    <div className="contenedorImagenes">
-                        <img src={img2} alt="Rodeshian"/>
-                    </div>
-                    Rodeshian
-                </li>
+                <CardRazaperros razaname="BorderCollie" imagen={img1}/>
+                <CardRazaperros razaname="Rhodesian" imagen={img2}/>                
+                
             </ul>
         </section>
         <section></section>
     </main>
-    
-
-    
     </div>
-  );
+    
+    );
 }
-
-export default App;
+export default Index
