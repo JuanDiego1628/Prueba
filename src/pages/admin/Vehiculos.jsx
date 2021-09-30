@@ -105,19 +105,23 @@ const TablaVehiculos=({listaVehiculos})=>{
     )
 }
 const FormularioCreacionVehiculos=({fparaMostrarTabla, listaVehiculos,fparaAgregarVehiculos})=>{
-    const [marca, setMarca]=useState();
-    const [color, setcolor]=useState();
-    const [modelo, setModelo]=useState();
+    const [marca, setMarca]=useState("");
+    const [color, setcolor]=useState("");
+    const [modelo, setModelo]=useState("");
 
     const enviarAlBackend=()=>{
         console.log("marca",marca);
+        if(marca===""||color===""||modelo===""){
+            toast.error("llene todos los campos")
+        }else{
         toast.success("Agregado con exito")
         fparaMostrarTabla(true)
         fparaAgregarVehiculos([
             ...listaVehiculos,
             {marca:marca,color:color,modelo:modelo},
-        ])
-    }
+                            ])
+            }
+        };
   
     return(
         <div className="flex flex-col justify-center items-center">
@@ -133,6 +137,7 @@ const FormularioCreacionVehiculos=({fparaMostrarTabla, listaVehiculos,fparaAgreg
                      onChange={(e)=>{
                          setMarca(e.target.value)
                      }}
+                     required
                      ></input>
                 </label>
                 <label className="flex flex-col" htmlFor="color">
@@ -143,6 +148,7 @@ const FormularioCreacionVehiculos=({fparaMostrarTabla, listaVehiculos,fparaAgreg
                      onChange={(e)=>{
                          setcolor(e.target.value)
                      }}
+                     required
                     >
                         <option disabled>Seleccione una</option>
                         <option>Rojo</option>
@@ -162,11 +168,12 @@ const FormularioCreacionVehiculos=({fparaMostrarTabla, listaVehiculos,fparaAgreg
                      onChange={(e)=>{
                          setModelo(e.target.value)
                      }}
+                     required
                      ></input>
                 </label>      
                 
                 <button 
-                    type="button"                
+                    type="submit"                
                     className="col-span-2 bg-green-500 p-2 rounded-full shadow-md"
                     onClick={()=>{
                         enviarAlBackend();
