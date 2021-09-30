@@ -5,7 +5,7 @@ const navbar = () => {
     return (
         <nav class='bg-red-400'>
             <ul class="flex w-full justify-between my-3">
-                <li>nav1</li>
+                <li>Logo</li>
                 <li>nav1</li>
                 <li>nav1</li>
                 <li className="px-3">

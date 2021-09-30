@@ -24,14 +24,14 @@ function App() {
         <Route path={["/admin", "/admin/vehiculos","/admin/clientes"]}>
           <PrivateLayout>
             <Switch>
-              <Route path="/admin">
-                <Admin/>
+              <Route path="/admin/clientes">
+                <Clientes/>
               </Route>
               <Route path="/admin/vehiculos">
                 <Vehiculos/>
               </Route>
-              <Route path='/admin/clientes'>
-                <Clientes/>
+              <Route path='/admin'>
+                <Index/>
               </Route>
             </Switch>
           </PrivateLayout>
